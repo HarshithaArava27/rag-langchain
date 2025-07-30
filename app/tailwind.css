@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.chat-input {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: 180ms box-shadow ease-in-out;
+}
+
+.chat-input:focus {
+    outline: 3px solid transparent;
+}
+
+ul > li {
+    padding-bottom: 12px;
+}
+
+.skeleton {
+  height: 1em;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  background: rgb(255,255,255);
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  box-sizing: border-box;
+}
+
+.skeleton.animation {
+  position: absolute;
+  width: 50%;
+  animation: slide 3s ease-in-out infinite alternate;  
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(150,150,150,1) 37%, rgba(150,150,150,1) 59%, rgba(255,255,255,1) 100%);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(20%);
+  }
+  100% {
+      transform: translateX(80%);
+  }
+}
+
+.chat-message {
+  white-space: normal;
+  padding: 12px;
+  min-height: 2.5em;
+  position: relative;
+}
+
+pre {
+  background-color: rgb(5, 5, 5, 1);
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+ol li {
+  padding: 12px 0px;
+}
+
+ul li {
+  padding: unset;
+}
